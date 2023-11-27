@@ -1,0 +1,83 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Rock Paper Scissors</title>
+</head>
+<body>
+  <script>
+   
+
+
+    
+function playerRound(){
+    let playerScore = 0;
+    let computerScore = 0;
+    for (let i = 0; i < 5; i++) {
+  
+
+
+
+    let player = prompt("Please pick either rock, paper or scissors");
+
+    let computerChoices = ["rock", "paper", "scissors"];
+
+    let randomComputerChoice = Math.floor(Math.random() * computerChoices.length);
+
+    let computer = computerChoices[randomComputerChoice]
+
+    
+
+
+    if (player === "rock" && computer === "scissors"){
+     playerScore = playerScore + 1;
+     console.log("You Win! Rock beats Paper");
+}else if (player === "rock" && computer === "paper"){
+     computerScore = computerScore + 1;
+     console.log("You Lose! Paper beats Rock");
+}else if (player === "rock" && computer === "rock"){
+    console.log("You Draw!");
+
+}else if (player === "paper" && computer === "scissors"){
+     computerScore = computerScore + 1;
+     console.log("You Lose! Scissors beats Paper");
+}else if (player === "paper" && computer === "paper"){
+    console.log("You Draw!");
+}else if (player === "paper" && computer === "rock"){
+    playerScore = playerScore + 1;
+    console.log("You Win! Paper beats Rock");
+
+ }else if (player === "scissors" && computer === "scissors"){
+    console.log("You Draw");
+}else if (player === "scissors" && computer === "paper"){
+    playerScore = playerScore + 1;
+    console.log("You Win! Scissors beats Paper");
+}else if (player === "scissors" && computer === "rock"){
+     computerScore = computerScore + 1;
+     console.log("You Lose! Rock beats Scissors");
+}
+
+ 
+
+}
+
+if (playerScore > computerScore){
+        return("You Win the game!")
+    }
+
+    if (playerScore < computerScore){
+        return ("You lose the game")
+    } 
+
+    if (playerScore === computerScore){
+        return ("You Draw the game")
+    } 
+
+};
+
+
+
+console.log(playerRound())
+
+  </script>
+</body>
+</html>
