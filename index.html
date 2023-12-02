@@ -2,82 +2,53 @@
 <head>
   <meta charset="UTF-8">
   <title>Rock Paper Scissors</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <script>
-   
+
+    <div class="header">
+<h1 class="game-title">Rock Paper Scissors</h1>
+</div>
 
 
-    
-function playerRound(){
-    let playerScore = 0;
-    let computerScore = 0;
-    for (let i = 0; i < 5; i++) {
+
+<div class="player-scores">
+    <h2 class="round"></h2>
+<h2 class="user_score"></h2>
+<h2 class="computer_score"></h2>
+</div>
+
+
+
+
+<div class="game">
+
+  <div class="rock">
+    <img src="imgs/istockphoto-117330859-612x612.jpg"> 
+    <button class="rock-choice">Rock</button>
+</div>
+  
   
 
-
-
-    let player = prompt("Please pick either rock, paper or scissors");
-
-    let computerChoices = ["rock", "paper", "scissors"];
-
-    let randomComputerChoice = Math.floor(Math.random() * computerChoices.length);
-
-    let computer = computerChoices[randomComputerChoice]
-
-    
-
-
-    if (player === "rock" && computer === "scissors"){
-     playerScore = playerScore + 1;
-     console.log("You Win! Rock beats Paper");
-}else if (player === "rock" && computer === "paper"){
-     computerScore = computerScore + 1;
-     console.log("You Lose! Paper beats Rock");
-}else if (player === "rock" && computer === "rock"){
-    console.log("You Draw!");
-
-}else if (player === "paper" && computer === "scissors"){
-     computerScore = computerScore + 1;
-     console.log("You Lose! Scissors beats Paper");
-}else if (player === "paper" && computer === "paper"){
-    console.log("You Draw!");
-}else if (player === "paper" && computer === "rock"){
-    playerScore = playerScore + 1;
-    console.log("You Win! Paper beats Rock");
-
- }else if (player === "scissors" && computer === "scissors"){
-    console.log("You Draw");
-}else if (player === "scissors" && computer === "paper"){
-    playerScore = playerScore + 1;
-    console.log("You Win! Scissors beats Paper");
-}else if (player === "scissors" && computer === "rock"){
-     computerScore = computerScore + 1;
-     console.log("You Lose! Rock beats Scissors");
-}
-
+  <div class="paper"> 
+    <img src="imgs/istockphoto-617742228-612x612.jpg">
+    <button>Paper</button>
+ </div>
+   
  
 
-}
-
-if (playerScore > computerScore){
-        return("You Win the game!")
-    }
-
-    if (playerScore < computerScore){
-        return ("You lose the game")
-    } 
-
-    if (playerScore === computerScore){
-        return ("You Draw the game")
-    } 
-
-};
+  <div class="scissors"> 
+    <img src="imgs/istockphoto-183428605-612x612.jpg">
+     <button>Scissors</button>
+    </div> 
+    
+</div>
 
 
+<div><h2 class="feedback"> </h2></div>
 
-console.log(playerRound())
 
-  </script>
+<script src="index.js"></script>
 </body>
+
 </html>
